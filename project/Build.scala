@@ -51,6 +51,11 @@ lazy val client = withDefaults(
     project.in(file("client")).dependsOn(api)
   ).settings(libraryDependencies ++= clientDeps)
 
+lazy val clientHighLevelApi = withDefaults(
+    "nakadi-klients-high-level-api",
+    project.in(file("client-high-level-api")).dependsOn(api)
+  ).settings(libraryDependencies ++= clientHighLevelApi)
+
   lazy val it = withDefaults(
       "nakadi-klients-integration-test",
       project.in(file("it")).dependsOn(api, client)

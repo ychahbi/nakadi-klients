@@ -35,7 +35,27 @@ object Dependencies {
 			"com.novocode" 								 % "junit-interface"                    % "0.11"       % "test"
 		)
 	}
+  val clientHighLevelApi ={
+	  Seq(
+			"com.typesafe"                 % "config"                  						% "1.3.0",
+			"com.google.guava"             % "guava"                   						% "19.0",
+			"com.fasterxml.jackson.core"   % "jackson-core"           						% jacksonVersion,
+			"com.fasterxml.jackson.module" %% "jackson-module-scala"   						% jacksonVersion,
+			"org.slf4j" 									 % "slf4j-api" 												  % "1.7.21",
+			"com.typesafe.akka"            % "akka-slf4j_2.11"                    % "2.4.7",
+			"net.dehora.nakadi"            % "nakadi-java-client"                 % "0.7.3",
+		  "net.dehora.nakadi"            % "nakadi-java-zign"                   % "0.7.3",
+			"ch.qos.logback"               % "logback-classic"         						% "1.1.7"  % "test",
+			"ch.qos.logback"               % "logback-core"         						  % "1.1.7"  % "test",
+			"com.typesafe.akka"            %% "akka-testkit"           						% akkaVersion  % "test",
+			"org.scalatest"                %% "scalatest"              						% scalaTestVersion      % "test",
+			"com.google.code.findbugs"     % "jsr305"                  						% "3.0.0"      % "test",
+			"junit"                        % "junit"                   						% junitVersion       % "test",
+			"org.mockito" 								 % "mockito-core" 											% "1.10.19"    % "test",
+			"com.novocode" 								 % "junit-interface"                    % "0.11"       % "test"
 
+		)
+	}
 	val itDeps = clientDeps ++ {
 		Seq(
 			"org.zalando.stups"                 % "tokens"                  						% "0.9.9",
